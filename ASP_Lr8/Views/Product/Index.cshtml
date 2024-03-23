@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ASP_Lr8.Models.Product>
+
+<h2>Products List</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.ID. @item.Name - @item.Price$ (@item.CreatedDate.ToString("yyyy-MM-dd"))</li>
+    }
+</ul>
+
+<h2>Products Table</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Created Date</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.CreatedDate.ToString("yyyy-MM-dd")</td>
+        </tr>
+    }
+</table>
